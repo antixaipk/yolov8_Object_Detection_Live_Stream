@@ -39,8 +39,8 @@ function stopProcess(message) {
 }
 
 //This Code is used to Communicate b/w Client & Server via SOCKETIO
-var socket = io.connect('https://127.0.0.1:5000/');
-
+// var socket = io.connect('http://127.0.0.1:5000/');
+var socket = io.connect('https://' + document.domain + ':' + location.port);
 function appendToTerminal(message) {
     var terminal = document.getElementById("terminal");
     var p = document.createElement("p");
