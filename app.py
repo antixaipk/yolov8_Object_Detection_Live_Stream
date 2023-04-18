@@ -26,7 +26,7 @@ class VideoStreaming(object):
         # self.VIDEO.set(10, 200)
         self._preview = True
         self._flipH = False
-        self._detect = False
+        self._detect = True
         self._model = False
         self._confidence = 75.0
 
@@ -75,7 +75,7 @@ class VideoStreaming(object):
         print(url)
         self._preview = True
         self._flipH = False
-        self._detect = False
+        self._detect = True
         self._model = False
 
         self._confidence = 75.0
