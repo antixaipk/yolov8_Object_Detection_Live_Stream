@@ -24,25 +24,6 @@ function startVideo() {
     $('#urlForm').submit(); // Submit the form
 }
 
-// function startVideo() {
-//     var url = $('#url').val();
-//
-//     $.ajax({
-//         url: "/index",
-//         type: "POST",
-//
-//         data: {url: url},
-//         success: function () {
-//             console.log("Video stream started successfully!");
-//
-//             location.reload();
-//         },
-//         error: function () {
-//             console.log("Error starting video stream!");
-//         }
-//     });
-// }
-
 function stopProcess(message) {
     console.log("Stop BUTTON");
     const terminalData = document.getElementById('terminal').innerHTML;
@@ -57,24 +38,8 @@ function stopProcess(message) {
         .catch(error => console.error(error));
 }
 
-
-// function clearTerminal() {
-//     // Get a reference to the clear button
-//     const clearButton = document.getElementById('clear-button');
-//
-//     // Add a click event listener to the clear button
-//     clearButton.addEventListener('click', function () {
-//         console.log("CLEAR BUTTON")
-//         document.getElementById('terminal').innerHTML = "";
-//     });
-//
-//     // Clear the terminal on page load
-//     document.getElementById('terminal').innerHTML = "";
-// }
-
-
 //This Code is used to Communicate b/w Client & Server via SOCKETIO
-var socket = io.connect('http://127.0.0.1:5000/');
+var socket = io.connect('https://127.0.0.1:5000/');
 
 function appendToTerminal(message) {
     var terminal = document.getElementById("terminal");
