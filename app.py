@@ -24,7 +24,7 @@ class VideoStreaming(object):
         print ("*********************************Video Streaming******************************")
         # self.VIDEO = cv2.VideoCapture(0)
         # self.VIDEO.set(10, 200)
-        self._preview = False
+        self._preview = True
         self._flipH = False
         self._detect = False
         self._model = False
@@ -73,7 +73,7 @@ class VideoStreaming(object):
 
     def show(self, url):
         print(url)
-        self._preview = False
+        self._preview = True
         self._flipH = False
         self._detect = False
         self._model = False
