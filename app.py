@@ -107,10 +107,6 @@ class VideoStreaming(object):
                 if self.detect:
                     print(self._confidence)
 
-                    # frame = cv2.cvtColor(snap, cv2.COLOR_BGR2RGB)
-                    # frame = cv2.resize(frame, (500,500
-                    # ))
-                    # Detect objects
                     if self.model:
                         results = model_custom.predict(frame, conf=self._confidence/100)  # predict on an image
                     else:
