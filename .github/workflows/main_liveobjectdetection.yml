@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'liveobjectdetection'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8BF73AFA07434E8AB59CAEE3D02AA432 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7079E4D0ACA34B5FA0F891A9B4209EA1 }}
