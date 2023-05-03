@@ -1,15 +1,12 @@
 from ultralytics import YOLO
 import time
 import numpy as np
-
-
 import cv2
 from flask import Flask, render_template, request, Response, session, redirect, url_for
-
 from flask_socketio import SocketIO
 import yt_dlp as youtube_dl
 
-model_custom =  YOLO("best.pt")
+model_custom =  YOLO("brand_yv8.pt")
 model_object_detection = YOLO("yolov8n.pt")
 
 app = Flask(__name__)
@@ -24,9 +21,9 @@ class VideoStreaming(object):
         print ("*********************************Video Streaming******************************")
         # self.VIDEO = cv2.VideoCapture(0)
         # self.VIDEO.set(10, 200)
-        self._preview = True
+        self._preview = False
         self._flipH = False
-        self._detect = True
+        self._detect = False
         self._model = False
         self._confidence = 75.0
 
@@ -73,9 +70,9 @@ class VideoStreaming(object):
 
     def show(self, url):
         print(url)
-        self._preview = True
+        self._preview = False
         self._flipH = False
-        self._detect = True
+        self._detect = False
         self._model = False
 
         self._confidence = 75.0
@@ -215,4 +212,4 @@ def test_connect():
     print('Connected')
 
 if __name__ == "__main__":
-    socketio.run(app)
+    socketio.run(app, port=8000)
